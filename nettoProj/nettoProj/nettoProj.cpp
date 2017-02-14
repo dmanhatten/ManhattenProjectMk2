@@ -1,7 +1,15 @@
 #include <stdio.h>
 
+int nettoRechner();
+
 int main() {
 
+	nettoRechner();
+
+	return 0;
+}
+
+int nettoRechner() {
 	double brutto = 0.0, mwst = 0.0, netto = 0.0;
 
 	printf("----------------Netto Rechner---------------\n");
@@ -13,7 +21,6 @@ int main() {
 	printf("Bruttobetrag: %.2lf\n"
 		"Steuersatz: %.2lf\n"
 		"Nettobetrag: %.2lf\n", brutto, mwst, netto);
-
 
 	return 0;
 }

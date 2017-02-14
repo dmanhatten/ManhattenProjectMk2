@@ -1,7 +1,15 @@
 #include <stdio.h>
 
+int umrechZeit();
+
 int main() {
 
+	umrechZeit();
+
+	return 0;
+}
+
+int umrechZeit() {
 	int sekunden = 0;
 	int minuten = 0;
 	int stunden = 0;
