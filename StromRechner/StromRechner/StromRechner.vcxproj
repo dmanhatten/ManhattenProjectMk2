@@ -19,9 +19,9 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FE65F6A9-F999-4B8C-ACCB-A5B3E40D182D}</ProjectGuid>
+    <ProjectGuid>{923F3F62-A2ED-452A-AB89-449D4BE70B7C}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>VolumenRechner</RootNamespace>
+    <RootNamespace>StromRechner</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -144,10 +144,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="VolumenRechner.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="volumenfun.h" />
+    <ClCompile Include="StromRechner.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
