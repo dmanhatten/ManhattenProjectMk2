@@ -19,10 +19,13 @@ int umrechZeit() {
 	scanf("%i", &sekunden);
 
 	minuten = sekunden / 60;
+	sekunden = sekunden % 60;
 	stunden = minuten / 60;
+	minuten = minuten % 60;
 	tage = stunden / 24;
+	stunden = stunden % 24;
 
-	printf("%i Tage\n%i Stunden\n%i Minuten\n%i Sekunden\n", tage, stunden, minuten, sekunden);
+	printf("%i Tage %i Stunden %i Minuten %i Sekunden\n", tage, stunden, minuten, sekunden);
 
 	return 0;
 }
