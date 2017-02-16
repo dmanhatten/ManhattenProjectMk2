@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include <math.h>
 
 
 int main() {
 
 	int groesse = 0, bmi = 0;
-	float gewicht = 0;
+	int gewicht = 0;
 	char geschlecht = 0;
 
 	printf("Geben Sie Ihr Geschlecht ein (m oder w): ");
@@ -13,13 +12,13 @@ int main() {
 	printf("Geben Sie Ihre Groesse in cm ein: ");
 	scanf("%i", &groesse);
 	printf("Geben Sie Ihr Gewicht in kg ein: ");
-	scanf("%f", &gewicht);
+	scanf("%i", &gewicht);
 
-	bmi = gewicht / pow(groesse / 100.f, 2);
+	bmi = gewicht / ((groesse / 100.f) * (groesse / 100.f));
 
 	printf("Ihr BMI ist %i. ", bmi);
 
-	if (geschlecht == 'm') {
+	if (geschlecht == 'm' || geschlecht == 'M') {
 
 		if (bmi >= 26 && bmi <= 30) {
 			printf("Sie haben Uebergewicht.\n");
@@ -29,7 +28,7 @@ int main() {
 			printf("Sie haben Untergewicht.\n");
 		}
 
-	} else if (geschlecht == 'w') {
+	} else {
 		if (bmi >= 25 && bmi <= 30) {
 			printf("Sie haben Uebergewicht.\n");
 		} else if (bmi >= 19 && bmi <= 24) {
@@ -37,8 +36,6 @@ int main() {
 		} else if (bmi < 19) {
 			printf("Sie haben Untergewicht.\n");
 		} 
-	} else {
-		printf("Ungueltige Eingabe fuer Geschlecht.\n");
 	}
 
 	return 0;
