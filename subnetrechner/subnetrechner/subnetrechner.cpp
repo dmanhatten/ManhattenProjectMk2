@@ -4,7 +4,7 @@
 int main() {
 
 	unsigned int okt1, okt2, okt3, okt4, uMaske, uMaskeBit, anzahlMoeglicherNetze, benutzerNetze;
-	unsigned int anzahlHostsProNetz, anzahlHostsGesamt, neueMaske, neueBits = 0;
+	unsigned int anzahlHostsProNetz, anzahlHostsGesamt, neueMaske, neueBits = 0, schrittweite;
 
 	printf("Bitte geben Sie eine Basisadresse ohne Hostanteil an.\n");
 	scanf("%u.%u.%u.%u", &okt1, &okt2, &okt3, &okt4);
@@ -28,8 +28,9 @@ int main() {
 	neueMaske = uMaske + neueBits;
 
 	// Schrittweite
-	anzahlHostsProNetz = pow(2, 32 - neueMaske) - 2;
-	anzahlHostsGesamt = anzahlHostsProNetz * benutzerNetze;
+	schrittweite = 256 / pow(2, neueBits);
+//	anzahlHostsProNetz = pow(2, 32 - neueMaske) - 2;
+//	anzahlHostsGesamt = anzahlHostsProNetz * benutzerNetze;
 
 	printf("Die neue Subnetzmaske ist /%u.\n", neueMaske);
 
