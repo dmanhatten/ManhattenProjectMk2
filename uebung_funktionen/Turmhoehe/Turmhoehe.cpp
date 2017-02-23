@@ -16,7 +16,6 @@ int main() {
 	turmhoehe = fHoehe(schattenlaenge, winkel);
 	printf("Der Turm ist %.2lf m hoch.\n", turmhoehe);
 
-
 	return 0;
 }
 
