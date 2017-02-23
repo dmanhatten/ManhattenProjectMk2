@@ -21,7 +21,7 @@ int main() {
 
 double fVolumen(double hoehe, double durchmesser) {
 
-	double volumen = PI * durchmesser* durchmesser * hoehe / 4;
+	double volumen = PI * (durchmesser / 2)*(durchmesser / 2) * hoehe;
 
 	return volumen;
 }
